@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>🛒 საყიდლების სია</h1>
+
+    <div class="controls">
+      <input type="text" id="productInput" placeholder="პროდუქტის დასახელება" />
+      <button id="addBtn">დამატება</button>
+      <button id="removeLastBtn">ბოლო ელემენტის წაშლა</button>
+      <button id="removeFirstBtn">პირველი ელემენტის წაშლა</button>
+      <br />
+      <input type="text" id="searchInput" placeholder="ძებნა..." />
+    </div>
+
+    <div class="counter">სულ პროდუქტები: <span id="count">0</span></div>
+
+    <div id="productContainer" class="cards"></div>
+
+    <p id="emptyMessage" class="empty">თქვენი სია ცარიელია</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
