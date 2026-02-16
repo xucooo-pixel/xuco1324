@@ -10,7 +10,7 @@ const addBtn = document.getElementById("addBtn");
 const removeLastBtn = document.getElementById("removeLastBtn");
 const removeFirstBtn = document.getElementById("removeFirstBtn");
 
-// ფუნქცია რომელიც ხატავს სიას
+
 function renderList(list) {
   container.innerHTML = "";
 
@@ -30,7 +30,7 @@ function renderList(list) {
   countSpan.textContent = shoppingList.length;
 }
 
-// დამატება (push)
+
 addBtn.addEventListener("click", () => {
   const value = input.value.trim();
   if (value === "") return;
@@ -40,19 +40,18 @@ addBtn.addEventListener("click", () => {
   renderList(shoppingList);
 });
 
-// ბოლო წაშლა (pop)
+
 removeLastBtn.addEventListener("click", () => {
   shoppingList.pop();
   renderList(shoppingList);
 });
 
-// პირველი წაშლა (shift)
 removeFirstBtn.addEventListener("click", () => {
   shoppingList.shift();
   renderList(shoppingList);
 });
 
-// ძებნა (filter)
+
 searchInput.addEventListener("input", () => {
   const searchValue = searchInput.value.toLowerCase();
 
@@ -63,5 +62,6 @@ searchInput.addEventListener("input", () => {
   renderList(filtered);
 });
 
-// საწყისი გამოძახება
+
 renderList(shoppingList);
+
